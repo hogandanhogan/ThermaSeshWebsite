@@ -1,0 +1,21 @@
+Placeholder Images Needed:
+
+1. logo.png - ThermaSesh app logo (recommended: 32x32px for nav, 512x512px master)
+2. watch-screenshot.png - Apple Watch app screenshot
+3. phone-screenshot.png - iPhone app screenshot  
+4. screenshot-1.png - Main dashboard screenshot
+5. screenshot-2.png - Heart rate monitoring screenshot
+6. screenshot-3.png - Analytics/insights screenshot
+7. screenshot-4.png - Settings/customization screenshot
+8. app-store-badge.svg - Official App Store download badge
+
+You can get the App Store badge from:
+https://developer.apple.com/app-store/marketing/guidelines/#section-badges
+
+For app screenshots, use the iOS Simulator or actual device screenshots.
+Recommended dimensions:
+- iPhone screenshots: 1170x2532px (iPhone 13 Pro)
+- Apple Watch screenshots: 396x484px (Series 7/8)
+
+All images should be optimized for web (compressed but high quality).
+Consider using WebP format for better performance.
