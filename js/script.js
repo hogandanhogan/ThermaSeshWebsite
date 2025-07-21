@@ -301,3 +301,57 @@ window.addEventListener('error', function(event) {
 
 // Add touch support for iOS
 document.addEventListener('touchstart', function() {}, { passive: true });
+
+// Image Modal Functionality
+function openModal(imageSrc, caption) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const modalCaption = document.getElementById('modalCaption');
+    
+    modal.style.display = 'block';
+    modalImg.src = imageSrc;
+    modalCaption.textContent = caption;
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    
+    // Add fade-in animation
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.opacity = '1';
+        modal.style.transition = 'opacity 0.3s ease';
+    }, 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    
+    // Add fade-out animation
+    modal.style.opacity = '0';
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 300);
+}
+
+// Modal event listeners
+document.addEventListener('DOMContentLoaded', function() {
+    // Close modal when clicking outside the image
+    document.getElementById('imageModal').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeModal();
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeModal();
+        }
+    });
+
+    // Prevent modal content clicks from closing the modal
+    document.querySelector('.modal-content').addEventListener('click', function(event) {
+        event.stopPropagation();
+    });
+});

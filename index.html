@@ -157,14 +157,14 @@
             </div>
             <div class="screenshots-grid watch-screenshots">
                 <div class="screenshot-item">
-                    <img src="images/watch-screenshot-1.PNG" alt="Apple Watch start session" class="screenshot-img">
+                    <img src="images/watch-screenshot-1.PNG" alt="Apple Watch start session" class="screenshot-img" onclick="openModal('images/watch-screenshot-1.PNG', 'Start Session - Begin your thermal therapy workout')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Start Session</h4>
                         <p>Begin your thermal therapy workout</p>
                     </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/watch-screenshot.PNG" alt="Apple Watch live data" class="screenshot-img">
+                    <img src="images/watch-screenshot.PNG" alt="Apple Watch live data" class="screenshot-img" onclick="openModal('images/watch-screenshot.PNG', 'Live Data - Monitor real-time heart rate and duration')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Live Data</h4>
                         <p>Monitor real-time heart rate and duration</p>
@@ -174,28 +174,28 @@
             
             <div class="screenshots-grid">
                 <div class="screenshot-item">
-                    <img src="images/screenshot-1.PNG" alt="ThermaSesh main interface" class="screenshot-img">
+                    <img src="images/screenshot-1.PNG" alt="ThermaSesh main interface" class="screenshot-img" onclick="openModal('images/screenshot-1.PNG', 'Main Dashboard - Track your sessions at a glance')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Main Dashboard</h4>
                         <p>Track your sessions at a glance</p>
                     </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/screenshot-2.PNG" alt="Calendar view" class="screenshot-img">
+                    <img src="images/screenshot-2.PNG" alt="Calendar view" class="screenshot-img" onclick="openModal('images/screenshot-2.PNG', 'Calendar View - Track your thermal therapy history')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Calendar View</h4>
                         <p>Track your thermal therapy history</p>
                     </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/screenshot-3.PNG" alt="Insights and analytics" class="screenshot-img">
+                    <img src="images/screenshot-3.PNG" alt="Insights and analytics" class="screenshot-img" onclick="openModal('images/screenshot-3.PNG', 'Insights - Detailed progress insights')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Insights</h4>
                         <p>Detailed progress insights</p>
                     </div>
                 </div>
                 <div class="screenshot-item">
-                    <img src="images/screenshot-4.PNG" alt="Settings and customization" class="screenshot-img">
+                    <img src="images/screenshot-4.PNG" alt="Settings and customization" class="screenshot-img" onclick="openModal('images/screenshot-4.PNG', 'Customization - Tailor your experience')" style="cursor: pointer;">
                     <div class="screenshot-overlay">
                         <h4>Customization</h4>
                         <p>Tailor your experience</p>
@@ -266,6 +266,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
