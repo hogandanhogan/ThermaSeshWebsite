@@ -1,5 +1,22 @@
 // Mobile Navigation
 document.addEventListener('DOMContentLoaded', function() {
+    // Set current year in footer
+    const currentYear = new Date().getFullYear();
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    }
+
+    // Set last updated date
+    const lastUpdatedElement = document.getElementById('last-updated-date');
+    if (lastUpdatedElement) {
+        const currentDate = new Date();
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+        const formattedDate = `${monthNames[currentDate.getMonth()]} ${currentYear}`;
+        lastUpdatedElement.textContent = formattedDate;
+    }
+
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
